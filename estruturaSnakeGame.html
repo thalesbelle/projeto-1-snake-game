@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Snake Game</title>
+        <link rel="stylesheet" type="text/css" href="estiloSnakeGame.css">
+    </head>
+    <body>
+        <audio id="musicaLobby" loop>
+            <source src="Bad Piggies Theme (mp3cut.net).mp3" type="audio/mpeg">
+        </audio>
+
+        <header class="cabecalho">
+            <div>
+                <img src="https://media-public.canva.com/tCkrc/MAEYKftCkrc/1/tl.png" id="imagemCobra">
+            </div>
+            <div>
+                <p class="tituloSnake" id="snake">nake</p>
+            </div>
+            <div>
+                <p class="tituloSnake" id="game">game</p>
+            </div>
+        </header>
+
+        <img src="./images/altoFalante.png" id="iconeSom" class="iconeSomGlobal">
+
+        <button class="botao" id="botaoIniciar">INICIAR</button><br>
+        <button class="botao" id="botaoCor">COR</button><br>
+        <button class="botao" id="botaoInstru">INSTRUÇÕES</button>
+        
+        <div class="contornoTabuleiro" hidden>
+            <div class="wrapperTabuleiro">
+                <div class="topBar">
+                    <div class="icones" id="iconesTopBar">
+                        <img src="./images/iconeFechar.png" class="iconeFechar" id="fecharJogo">
+                    </div>
+                        <div class="pontuacao" id="pontuacao">Pontuação: 0</div>
+                </div>
+
+                <table id="tabuleiro">
+                    <tbody></tbody>              
+                </table>
+            </div>
+        </div>
+
+        <div id="gameOverScreen">
+            <div>GAME OVER!</div>
+            <div>Deseja jogar novamente?</div>
+            <button id="botaoReiniciar">REINICIAR</button>
+        </div>
+        <audio id="somMorte" src="death-sound.mp3"></audio>
+
+        <script src="movimentosSnakeGame.js"></script>
+    </body>
+</html>
